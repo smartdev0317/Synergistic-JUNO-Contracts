@@ -1,0 +1,28 @@
+[package]
+name = "cw20-vesting"
+version    = "1.0.0"
+edition    = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+backtraces = ["cosmwasm-std/backtraces"]
+# use library feature to disable all instantiate/execute/query exports
+library = []
+
+[dependencies]
+cosmwasm-std = { version = "1.1.0" }
+cw-storage-plus = { version = "1.0.1" } 
+cw-utils = "1.0"
+cw2 = {version = "1.0.1"}
+cw20 = {version = "1.0.1"}
+schemars = "0.8.10"
+serde = { version = "1.0.137", default-features = false, features = ["derive"] }
+thiserror = "1.0.20"
+syne-curve-utils = { path = "../../packages/syne-curve-utils", default-features = false }
+synedao = { path = "../../packages/synedao" }
+
+[dev-dependencies]
+anyhow = "1"
+cosmwasm-schema = "1.1.0"

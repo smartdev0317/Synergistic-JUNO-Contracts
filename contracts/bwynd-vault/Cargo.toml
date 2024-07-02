@@ -1,0 +1,40 @@
+[package]
+name = "bwynd-vault"
+version = "1.0.1"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+# for more explicit tests, cargo test --features=backtraces
+backtraces = ["cosmwasm-std/backtraces"]
+# use library feature to disable all instantiate/execute/query exports
+library = []
+
+[dependencies]
+synedex = {path = "../../packages/synedex", default-features = false }
+syne-curve-utils = { path = "../../packages/syne-curve-utils", default-features = false }
+synedao = { path = "../../packages/synedao" }
+# cw-plus
+cw-utils = "1.0"
+cw2 = {version = "1.0.1"}
+cw20 = {version = "1.0.1"}
+cw-controllers = "1.0"
+cw-storage-plus = { version = "1.0.1" }
+# core cosmwasm
+cosmwasm-std = "1.1.0"
+# standard libs
+cosmwasm-schema = "1.1.0"
+serde = { version = "1.0.137", default-features = false, features = ["derive"] }
+thiserror = "1.0.20"
+
+[dev-dependencies]
+# cw-plus
+cw-multi-test = "0.16"
+cw20-base = { version = "1.0.1", features = ["library"] }
+# core cosmwasm
+cosmwasm-schema = "1.1.0"
+# standard libs
+anyhow = "1"
+test-case = "2.2.1"

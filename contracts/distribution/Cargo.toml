@@ -1,0 +1,30 @@
+[package]
+name = "syne-distribution"
+version = "1.0.0"
+edition = "2021"
+description = "A contract that distributes a configured amount of cw20 tokens in configured time increments"
+
+exclude = ["contract.wasm", "hash.txt"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+backtraces = ["cosmwasm-std/backtraces"]
+library = []
+
+[dependencies]
+cosmwasm-std = { version = "1.1.0" }
+cw-storage-plus = { version = "1.0.1" }
+cw-utils = "1.0"
+cw2 = { version = "1.0.1" }
+cw20 = { version = "1.0.1" }
+schemars = "0.8.10"
+serde = { version = "1.0.137", default-features = false, features = ["derive"] }
+thiserror = "1.0.20"
+
+[dev-dependencies]
+anyhow = "1"
+cosmwasm-schema = { version = "1.1.0" }
+cw-multi-test = { version = "0.16.0" }
+cw20-base = { version = "1.0.1" }

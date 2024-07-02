@@ -1,0 +1,22 @@
+[package]
+name = "synedex"
+version = "1.0.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+# for quicker tests, cargo test --lib
+# for more explicit tests, cargo test --features=backtraces
+backtraces = ["cosmwasm-std/backtraces"]
+
+[dependencies]
+thiserror = "1"
+cw20 = "1.0"
+cw20-base = { version = "1.0", package = "cw20-base", features = ["library"] }
+cw-utils = "1.0"
+cosmwasm-std = "1.1"
+uint = "0.9"
+cw-storage-plus = "1.0"
+itertools = "0.10"
+cosmwasm-schema = "1.1"

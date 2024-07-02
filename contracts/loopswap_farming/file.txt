@@ -1,0 +1,12 @@
+Password: Test@123
+- name: LaalHai
+  type: local
+  address: juno1wymdep8lzu8d5epj3rj6h586mjlnjkfnrtpq6z
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AvCbX4yp0qoVZv1IijqYQ2WBm8xK8xKcDCyhE6iYJpdY"}'
+  mnemonic: ""
+
+
+**Important** write this mnemonic phrase in a safe place.
+It is the only way to recover your account if you ever forget your password.
+
+nice dizzy utility quiz talent luxury shrimp stock sword rack goose stick fish parent hire power code chair search inhale dinner couch canal chat
